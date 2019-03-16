@@ -125,13 +125,13 @@ def main():
                 r = requests.post(url = API_ENDPOINT)
 
                 #Send Data to CEMS Servr (Admin account)
-                API_ENDPOINT = CEMS_URL+"input/post.json?node="+ NODE_NAME + "_TCM3003_ID_"+str(UDP_Report.get("id")) + "_SubID_"+str(UDP_Report.get("sub")+172)+"&json={"\
+                API_ENDPOINT = CEMS_URL+"input/post.json?node=" + NODE_NAME + "_TCM3001_ID_"+str(UDP_Report.get("id")) + "&json={"\
                 +'PhA_Irms :'+str(UDP_Report.get("i0"))+','+'PhB_Irms: '+str(UDP_Report.get("i1"))+','+'PhC_Irms: '+str(UDP_Report.get("i2"))\
                 +"}&apikey="+API_KEY_2
                 r = requests.post(url = API_ENDPOINT)
 
                 #Send Data to CEMS Servr (Admin account)
-                API_ENDPOINT = CEMS_URL+"input/post.json?node="+ NODE_NAME + "_TCM3003_ID_"+str(UDP_Report.get("id")) + "_SubID_"+str(UDP_Report.get("sub")+172)+"&json={"\
+                API_ENDPOINT = CEMS_URL + "input/post.json?node=" + NODE_NAME + "_TCM3001_ID_"+str(UDP_Report.get("id")) + "&json={"\
                 +'PhA_Irms :'+str(UDP_Report.get("i0"))+','+'PhB_Irms: '+str(UDP_Report.get("i1"))+','+'PhC_Irms: '+str(UDP_Report.get("i2"))\
                 +"}&apikey="+API_KEY_EmonPi
                 r = requests.post(url = API_ENDPOINT)
